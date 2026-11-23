@@ -420,3 +420,15 @@ body{
 @media (prefers-color-scheme: dark){
   body{background-image:none}
 }
+
+/* ===== 第9弾 ヒーロー背景写真化（2026-11-23） ===== */
+.hero{
+  background-image:linear-gradient(rgba(250,246,238,.88), rgba(250,246,238,.78)), url("assets/hero-biz.svg");
+  background-size:cover;background-position:center;
+}
+.hero-visual{display:none}
+.hero .trust-line{margin-top:40px}
+@media (prefers-color-scheme: dark){
+  .hero{background-image:linear-gradient(rgba(16,18,28,.88), rgba(16,18,28,.82)), url("assets/hero-biz.svg")}
+}
+.sec-video{width:100%;border-radius:16px;margin:6px 0 26px;background:#14161F;aspect-ratio:16/9}
