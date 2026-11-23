@@ -46,29 +46,42 @@
 </script>
 </head>
 <body>
-<div class="noren" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+<p class="topbar">このサイトには広告・PRリンクが含まれます</p>
 
-<header class="hero">
-  <p class="pr-line">このサイトには広告・PRリンクが含まれます</p>
-  <img class="hero-logo" src="assets/logo.jpg" alt="かれこれ屋の落款ロゴ" width="112" height="112">
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="かれこれ屋 トップへ">
+    <img src="assets/logo.jpg" alt="" width="40" height="40">
+    <span class="brand-name">かれこれ屋</span>
+    <span class="brand-en">KAREKORE-YA</span>
+  </a>
+  <nav class="site-nav" aria-label="主な案内">
+    <a href="#note">記事</a>
+    <a href="#coconala">仕事を頼む</a>
+    <a href="#books">本</a>
+    <a href="#english">English</a>
+    <a href="#room">おすすめ品</a>
+    <a class="nav-cta" href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<header class="hero" id="top">
+  <p class="hero-kicker">ARTICLES ・ BOOKS ・ WRITING SERVICES ・ RECOMMENDATIONS</p>
   <h1>かれこれ屋</h1>
   <p class="hero-copy">記事と本、文章の仕事とおすすめ品。<br>かれこれ色々、まとめた場所です</p>
   <div class="hero-buttons">
     <a class="btn btn-main" href="https://note.com/yumi_ai_">まず読む：noteへ</a>
     <a class="btn btn-sub" href="https://coconala.com/users/6410284">仕事を頼む：ココナラへ</a>
   </div>
-  <nav class="hero-nav" aria-label="分野への案内">
-    <a href="#note">note</a>
-    <a href="#coconala">ココナラ</a>
-    <a href="#books">本</a>
-    <a href="#english">英語の仕事</a>
-    <a href="#room">楽天ROOM</a>
-  </nav>
+  <ul class="hero-lines">
+    <li><strong>読む</strong>noteの記事とKindleの本</li>
+    <li><strong>頼む</strong>文章校正・翻訳・Excelの仕事</li>
+    <li><strong>買う</strong>楽天ROOMのおすすめ品</li>
+  </ul>
 </header>
 
 <main>
   <section id="note" aria-labelledby="h-note">
-    <h2 id="h-note">note｜読む</h2>
+    <div class="sec-head"><p class="sec-kicker">ARTICLES</p><h2 id="h-note">note｜読む</h2></div>
     <p class="sec-desc">ChatGPTなどAIツールの使い方、サブスクリプションの見直しと節約、AIが書いた文章を自然な日本語に整えるコツなど、暮らしと仕事に効く記事を書いています。無料で読める記事と、有料のまとめ記事・デジタル商品があります</p>
     <div class="cards">
       <a class="card" href="https://note.com/yumi_ai_">
@@ -89,7 +102,7 @@
   </section>
 
   <section id="ads" aria-labelledby="h-ads">
-    <h2 id="h-ads">広告・PR</h2>
+    <div class="sec-head"><p class="sec-kicker">SPONSORED</p><h2 id="h-ads">広告・PR</h2></div>
     <p class="sec-desc">使ってよかったサービスを紹介します（広告・PRを含みます）</p>
     <div class="carousel" data-carousel>
       <div class="carousel-track" tabindex="0" aria-label="広告一覧（横にスワイプできます）">
@@ -109,7 +122,7 @@
   </section>
 
   <section id="coconala" aria-labelledby="h-coconala">
-    <h2 id="h-coconala">ココナラ｜頼む・買う</h2>
+    <div class="sec-head"><p class="sec-kicker">SERVICES</p><h2 id="h-coconala">ココナラ｜頼む・買う</h2></div>
     <p class="sec-desc">日本語の文章校正・推敲、英語から日本語への翻訳、返信文の作成、Excelの表作成やデータ整理などの仕事を受け付けています。すぐ使えるテンプレートやプロンプト集といったデジタル商品も販売しています</p>
     <div class="cards">
       <a class="card" href="https://coconala.com/users/6410284">
@@ -136,7 +149,7 @@
   </section>
 
   <section id="books" aria-labelledby="h-books">
-    <h2 id="h-books">KDPの本｜読む</h2>
+    <div class="sec-head"><p class="sec-kicker">BOOKS</p><h2 id="h-books">KDPの本｜読む</h2></div>
     <p class="sec-desc">著者 Torvel のKindle本です。ひとり仕事の事務をAIで効率化する実用書、フリーランス向けAIワークフローの英語の本、昭和レトロ雑学クイズと英語なぞなぞの脳トレ本があります。Kindle Unlimited対象です</p>
     <div class="cards">
       <a class="card book-card" href="https://www.amazon.co.jp/dp/B0HS4YD887">
@@ -162,7 +175,7 @@
   </section>
 
   <section id="english" aria-labelledby="h-english" lang="en">
-    <h2 id="h-english">English Services</h2>
+    <div class="sec-head"><p class="sec-kicker">GLOBAL</p><h2 id="h-english">English Services</h2></div>
     <p class="sec-desc">Native Japanese editing and proofreading, English-to-Japanese translation and localization by Ken Sato. I fix AI-translated and machine-translated Japanese into natural, native text. Orders via Fiverr; free weekly newsletter “AI Translation Fails in Japanese” on Substack.</p>
     <div class="cards">
       <a class="card" href="https://www.fiverr.com/japanese_editor">
@@ -178,7 +191,7 @@
   </section>
 
   <section id="room" aria-labelledby="h-room">
-    <h2 id="h-room">楽天ROOM｜買う</h2>
+    <div class="sec-head"><p class="sec-kicker">SHOPPING</p><h2 id="h-room">楽天ROOM｜買う</h2></div>
     <p class="pr-note">広告・PRを含みます</p>
     <p class="sec-desc">楽天市場のお取り寄せグルメ、日用品やキッチン用品などの暮らしのもの、美容のお気に入りを、実際に使った感想と一緒に紹介しています</p>
     <div class="cards">
@@ -191,7 +204,7 @@
   </section>
 
   <section id="profile" aria-labelledby="h-profile">
-    <h2 id="h-profile">プロフィール</h2>
+    <div class="sec-head"><p class="sec-kicker">ABOUT</p><h2 id="h-profile">プロフィール</h2></div>
     <img class="profile-noren" src="assets/noren.jpg" alt="暖簾のある店先のイラスト" width="120" height="120" loading="lazy">
     <p>かれこれ屋は、記事と本、文章の仕事とおすすめ品をまとめた総合案内サイトです。</p>
     <p>noteではAIツールやサブスクの見直し、暮らしの記事を書いています。本はKindleで出版中。文章の校正・翻訳・Excelなどの仕事はココナラとFiverrで受けています。お取り寄せと暮らしのお気に入りは楽天ROOMにまとめています。</p>
@@ -199,15 +212,28 @@
   </section>
 
   <section id="contact" aria-labelledby="h-contact">
-    <h2 id="h-contact">お問い合わせ</h2>
+    <div class="sec-head"><p class="sec-kicker">CONTACT</p><h2 id="h-contact">お問い合わせ</h2></div>
     <p class="sec-desc">ご連絡はメールで受け付けています</p>
     <a class="btn btn-main contact-btn" href="mailto:shiro57@muse.ai">メールを送る：shiro57@muse.ai</a>
   </section>
 </main>
 
 <footer>
-  <p class="footer-name">かれこれ屋</p>
-  <p>このサイトには広告・PRリンクが含まれます。リンク先のサービスは各運営会社のものです。</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">かれこれ屋</p>
+      <p>記事と本、文章の仕事とおすすめ品の総合案内サイトです。</p>
+    </div>
+    <nav class="footer-nav" aria-label="フッター案内">
+      <a href="#note">note｜読む</a>
+      <a href="#coconala">ココナラ｜頼む・買う</a>
+      <a href="#books">KDPの本</a>
+      <a href="#english">English Services</a>
+      <a href="#room">楽天ROOM</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer-note">このサイトには広告・PRリンクが含まれます。リンク先のサービスは各運営会社のものです。<br>お問い合わせ：shiro57@muse.ai</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
