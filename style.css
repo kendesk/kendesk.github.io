@@ -176,3 +176,12 @@ footer{background:var(--indigo-dark);color:#C9CCE2;margin-top:72px}
   .hero h1{font-size:40px}
   .btn{width:100%}
 }
+
+/* ヒーロー2カラム＋紹介動画 */
+.hero-visual{width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow);margin-top:28px}
+.intro-video{width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow);background:#000}
+@media (min-width:900px){
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .hero-visual{margin-top:0}
+  .intro-video{max-width:860px}
+}
