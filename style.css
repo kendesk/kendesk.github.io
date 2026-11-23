@@ -350,3 +350,42 @@ body{
 /* 広告バナー画像 */
 .ad-banner{display:block;margin-bottom:12px}
 .ad-banner img{max-width:100%;height:auto;border-radius:8px}
+
+/* ===== 第6弾 ファーストビュー刷新（2026-11-23） ===== */
+.hero{display:block;padding:88px 0 8px;min-height:0}
+.hero h1{
+  font-size:clamp(74px,11.5vw,128px);line-height:1.04;letter-spacing:.1em;margin:20px 0 14px;
+}
+html[lang="en"] .hero h1{font-size:clamp(42px,6.5vw,72px);letter-spacing:.01em}
+.hero-copy{font-size:clamp(18px,2.3vw,22px);line-height:1.9}
+.hero::after{font-size:400px;top:-30px;right:0}
+.hero-lines{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--line);margin-top:46px;list-style:none;
+}
+.hero-lines li{padding:18px 20px 4px 0;font-size:15px;color:var(--muted)}
+.hero-lines li strong{
+  display:block;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:24px;color:var(--ink);margin-bottom:4px;letter-spacing:.14em;
+}
+.hero-visual{width:100%;height:auto;max-height:560px;object-fit:cover;margin-top:38px}
+main section{padding-top:96px}
+section h2, .sec-head h2{font-size:clamp(30px,4.2vw,40px)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-kicker,.hero h1,.hero-copy,.hero-buttons,.hero-lines,.hero-visual{
+  animation:rise .8s cubic-bezier(.2,.6,.2,1) both;
+}
+.hero h1{animation-delay:.08s}
+.hero-copy{animation-delay:.16s}
+.hero-buttons{animation-delay:.24s}
+.hero-lines{animation-delay:.32s}
+.hero-visual{animation-delay:.4s}
+@media (max-width:719px){
+  .hero{padding-top:56px}
+  .hero-lines{grid-template-columns:1fr}
+  .hero-lines li{padding:12px 0 2px}
+  main section{padding-top:64px}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-kicker,.hero h1,.hero-copy,.hero-buttons,.hero-lines,.hero-visual{animation:none}
+}
