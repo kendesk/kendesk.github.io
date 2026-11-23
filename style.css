@@ -411,3 +411,12 @@ section h2, .sec-head h2{font-size:clamp(30px,4.2vw,40px)}
   .hero{background-image:none}
   .sec-kicker{background:#1C1F2E}
 }
+
+/* ===== 第8弾 全体背景画像（2026-11-23） ===== */
+body{
+  background-image:url("assets/page-bg.jpg");
+  background-size:cover;background-position:center top;background-attachment:fixed;
+}
+@media (prefers-color-scheme: dark){
+  body{background-image:none}
+}
