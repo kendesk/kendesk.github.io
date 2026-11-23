@@ -194,3 +194,93 @@ footer{background:var(--indigo-dark);color:#C9CCE2;margin-top:72px}
 }
 .trust-line li:not(:last-child)::after{content:"／";margin:0 12px;color:var(--line)}
 @media (min-width:900px){ .hero .trust-line{grid-column:1 / -1} }
+
+/* ===== おしゃれ化レイヤー（2026-11-23） ===== */
+/* 見出しは明朝で編集的に */
+h1,h2,.brand-name,.footer-name{
+  font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;
+}
+.hero{
+  position:relative;
+  background:
+    radial-gradient(640px 340px at 88% 8%, rgba(192,57,31,.07), transparent 60%),
+    radial-gradient(760px 420px at 8% 0%, rgba(43,53,119,.08), transparent 60%);
+}
+.hero::after{
+  content:"か";position:absolute;right:2%;top:6px;z-index:0;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:300px;line-height:1;color:rgba(43,53,119,.045);pointer-events:none;
+}
+.hero-text,.hero-visual{position:relative;z-index:1}
+.hero-visual{
+  border:1px solid var(--line);
+  box-shadow:14px 14px 0 rgba(192,57,31,.85), var(--shadow);
+  border-radius:6px;
+}
+.hero h1{letter-spacing:.1em}
+.hero-kicker{border-left:3px solid var(--shu);padding-left:12px}
+/* セクション見出し：番号つきキッカーと細い線 */
+.sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
+.sec-head .sec-kicker{margin-bottom:0;white-space:nowrap}
+.sec-head h2{border:none}
+/* カード：ホバーで朱のライン */
+.card{position:relative;overflow:hidden}
+.card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--shu);transform:scaleY(0);transition:transform .22s ease;transform-origin:top;
+}
+.card:hover::before{transform:scaleY(1)}
+/* 紹介動画セクションは藍の帯で締める */
+#movie{
+  background:var(--indigo-dark);border-radius:18px;
+  padding:44px 34px 40px;margin-top:64px;
+}
+#movie h2{color:#fff}
+#movie .sec-desc{color:#B9BDD8}
+#movie .sec-kicker{color:#E88A76}
+#movie .sec-head{border-bottom-color:#333B66}
+/* 信頼の1行を実績ストリップ風に */
+.trust-line li{letter-spacing:.03em}
+.trust-line li::before{content:"";display:inline-block;width:7px;height:7px;background:var(--shu);border-radius:50%;margin-right:9px;vertical-align:2px}
+.trust-line li:not(:last-child)::after{content:""}
+/* スクロールでふわりと出す（控えめに） */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ===== 追加セクション（2026-11-23 第3弾） ===== */
+.news-list{list-style:none}
+.news-list li{display:flex;gap:16px;padding:11px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.news-list time{color:var(--shu);font-weight:700;white-space:nowrap;font-size:14px;padding-top:1px}
+.pickup-card h3{font-size:19px}
+.sub-h{font-size:17px;margin:28px 0 10px}
+.price-table{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.price-table th,.price-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.price-table thead th{background:var(--indigo);color:#fff;font-size:14px}
+.price-table tbody tr:last-child td{border-bottom:none}
+.price-table td:last-child{font-weight:700;white-space:nowrap}
+.price-note{font-size:13px;color:var(--muted);margin-top:8px}
+.faq-list details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.faq-list summary{font-weight:700;cursor:pointer;font-size:16px}
+.faq-list details p{margin-top:10px;font-size:15px;color:#333}
+.mobile-cta{display:none}
+.sns-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.sns-row a{border:1px solid #333B66;border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700}
+.sns-row a:hover{background:#333B66;text-decoration:none}
+@media (max-width:719px){
+  .mobile-cta{
+    display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:rgba(255,255,255,.96);border-top:1px solid var(--line);
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  }
+  .mobile-cta a{
+    flex:1;text-align:center;border:1.5px solid var(--indigo);color:var(--indigo);
+    border-radius:999px;padding:11px 6px;font-weight:700;font-size:14px;background:#fff;
+  }
+  .mobile-cta a.mobile-cta-main{background:var(--indigo);color:#fff}
+  .mobile-cta a:hover{text-decoration:none}
+  body{padding-bottom:72px}
+  .news-list li{flex-direction:column;gap:2px}
+}

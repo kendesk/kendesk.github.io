@@ -35,3 +35,16 @@
     root.querySelector('.carousel-ui').style.display='none';
   }
 })();
+
+// セクションの出現アニメーション（控えめ）
+(function(){
+  var secs = document.querySelectorAll('main section');
+  if(!('IntersectionObserver' in window)){ return; }
+  secs.forEach(function(el){ el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.08});
+  secs.forEach(function(el){ io.observe(el); });
+})();

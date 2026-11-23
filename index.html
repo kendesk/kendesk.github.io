@@ -45,6 +45,15 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"仕事の依頼はどこからできますか？","acceptedAnswer":{"@type":"Answer","text":"ココナラとFiverrの各サービスページからお願いしています。"}},
+{"@type":"Question","name":"料金の目安を教えてください","acceptedAnswer":{"@type":"Answer","text":"セットの目安は、文章 ¥10,000／返信 ¥13,000／Excel ¥14,000 です。単品サービスも各ページに載せています。"}},
+{"@type":"Question","name":"納期はどれくらいですか？","acceptedAnswer":{"@type":"Answer","text":"内容によって変わります。各サービスページに目安を書いていますので、注文前にご確認ください。"}},
+{"@type":"Question","name":"支払い方法は？","acceptedAnswer":{"@type":"Answer","text":"お支払いはココナラ／Fiverrの仕組みを通していただく形です。このサイトから直接お支払いいただくことはありません。"}},
+{"@type":"Question","name":"本や有料記事はどこで買えますか？","acceptedAnswer":{"@type":"Answer","text":"本はAmazon（Kindle）、記事はnoteの各ページからご購入いただけます。"}}
+]}
+</script>
 </head>
 <body>
 <p class="topbar">このサイトには広告・PRリンクが含まれます</p>
@@ -90,14 +99,14 @@
 </header>
 
 <section id="movie" aria-labelledby="h-movie">
-  <div class="sec-head"><p class="sec-kicker">MOVIE</p><h2 id="h-movie">紹介動画</h2></div>
+  <div class="sec-head"><p class="sec-kicker">INTRODUCTION</p><h2 id="h-movie">紹介動画</h2></div>
   <p class="sec-desc">かれこれ屋でできることを、約25秒の動画で紹介します（音声はありません）。</p>
   <video class="intro-video" src="assets/intro.mp4" poster="assets/keyvisual.jpg" controls muted playsinline preload="metadata"></video>
 </section>
 
 <main>
   <section id="note" aria-labelledby="h-note">
-    <div class="sec-head"><p class="sec-kicker">ARTICLES</p><h2 id="h-note">note｜読む</h2></div>
+    <div class="sec-head"><p class="sec-kicker">01 ARTICLES</p><h2 id="h-note">note｜読む</h2></div>
     <p class="sec-desc">ChatGPTなどAIツールの使い方、サブスクリプションの見直しと節約、AIが書いた文章を自然な日本語に整えるコツなど、暮らしと仕事に効く記事を書いています。無料で読める記事と、有料のまとめ記事・デジタル商品があります</p>
     <div class="cards">
       <a class="card" href="https://note.com/yumi_ai_">
@@ -139,7 +148,7 @@
   </section>
 
   <section id="coconala" aria-labelledby="h-coconala">
-    <div class="sec-head"><p class="sec-kicker">SERVICES</p><h2 id="h-coconala">ココナラ｜頼む・買う</h2></div>
+    <div class="sec-head"><p class="sec-kicker">02 SERVICES</p><h2 id="h-coconala">ココナラ｜頼む・買う</h2></div>
     <p class="sec-desc">日本語の文章校正・推敲、英語から日本語への翻訳、返信文の作成、Excelの表作成やデータ整理などの仕事を受け付けています。すぐ使えるテンプレートやプロンプト集といったデジタル商品も販売しています</p>
     <div class="cards">
       <a class="card" href="https://coconala.com/users/6410284">
@@ -166,7 +175,7 @@
   </section>
 
   <section id="books" aria-labelledby="h-books">
-    <div class="sec-head"><p class="sec-kicker">BOOKS</p><h2 id="h-books">KDPの本｜読む</h2></div>
+    <div class="sec-head"><p class="sec-kicker">03 BOOKS</p><h2 id="h-books">KDPの本｜読む</h2></div>
     <p class="sec-desc">著者 Torvel のKindle本です。ひとり仕事の事務をAIで効率化する実用書、フリーランス向けAIワークフローの英語の本、昭和レトロ雑学クイズと英語なぞなぞの脳トレ本があります。Kindle Unlimited対象です</p>
     <div class="cards">
       <a class="card book-card" href="https://www.amazon.co.jp/dp/B0HS4YD887">
@@ -192,7 +201,7 @@
   </section>
 
   <section id="english" aria-labelledby="h-english" lang="en">
-    <div class="sec-head"><p class="sec-kicker">GLOBAL</p><h2 id="h-english">English Services</h2></div>
+    <div class="sec-head"><p class="sec-kicker">04 GLOBAL</p><h2 id="h-english">English Services</h2></div>
     <p class="sec-desc">Native Japanese editing and proofreading, English-to-Japanese translation and localization by Ken Sato. I fix AI-translated and machine-translated Japanese into natural, native text. Orders via Fiverr; free weekly newsletter “AI Translation Fails in Japanese” on Substack.</p>
     <div class="cards">
       <a class="card" href="https://www.fiverr.com/japanese_editor">
@@ -208,7 +217,7 @@
   </section>
 
   <section id="room" aria-labelledby="h-room">
-    <div class="sec-head"><p class="sec-kicker">SHOPPING</p><h2 id="h-room">楽天ROOM｜買う</h2></div>
+    <div class="sec-head"><p class="sec-kicker">05 SHOPPING</p><h2 id="h-room">楽天ROOM｜買う</h2></div>
     <p class="pr-note">広告・PRを含みます</p>
     <p class="sec-desc">楽天市場のお取り寄せグルメ、日用品やキッチン用品などの暮らしのもの、美容のお気に入りを、実際に使った感想と一緒に紹介しています</p>
     <div class="cards">
@@ -249,10 +258,21 @@
       <a href="#room">楽天ROOM</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
-    <p class="footer-note">このサイトには広告・PRリンクが含まれます。リンク先のサービスは各運営会社のものです。<br>お問い合わせ：shiro57@muse.ai</p>
+    <div class="sns-row">
+          <a href="https://x.com/japanese_editor">X</a>
+          <a href="https://www.instagram.com/yumi_826_/">Instagram</a>
+          <a href="https://www.threads.com/@yumi_826_">Threads</a>
+          <a href="https://note.com/yumi_ai_">note</a>
+        </div>
+        <p class="footer-note">このサイトには広告・PRリンクが含まれます。リンク先のサービスは各運営会社のものです。<br>お問い合わせ：shiro57@muse.ai</p>
   </div>
 </footer>
 
 <script src="script.js"></script>
+
+  <div class="mobile-cta">
+    <a href="https://note.com/yumi_ai_">まず読む：note</a>
+    <a class="mobile-cta-main" href="https://coconala.com/users/6410284">仕事を頼む：ココナラ</a>
+  </div>
 </body>
 </html>
