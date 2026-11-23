@@ -284,3 +284,29 @@ h1,h2,.brand-name,.footer-name{
   body{padding-bottom:72px}
   .news-list li{flex-direction:column;gap:2px}
 }
+
+/* ===== 第4弾（2026-11-23） ===== */
+.brand-mark{display:inline-flex}
+.brand-mark svg{display:block;border-radius:10px}
+.substack-embed{margin-top:14px}
+.substack-embed iframe{width:100%;max-width:480px;height:150px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.search-box{width:100%;padding:13px 16px;font-size:16px;border:1.5px solid var(--line);border-radius:999px;margin-bottom:22px;background:#fff;color:var(--ink)}
+.search-box:focus{outline:2px solid var(--indigo);outline-offset:1px}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#13151E;--ink:#ECEEF4;--muted:#A3A8BE;--line:#2B2F47}
+  body{background:var(--bg)}
+  .site-header{background:rgba(19,21,30,.94);border-bottom-color:var(--line)}
+  .site-nav a{color:var(--ink)}
+  .card,.faq-list details,.price-table{background:#1C1F2E}
+  .card p,.faq-list details p{color:#C6CADB}
+  .contact-box{background:#1C1F2E}
+  .hero-lead,.sec-desc{color:#B9BDD2}
+  .trust-line{color:#B9BDD2}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:#4A4F6E}
+  .search-box{background:#1C1F2E}
+  .mobile-cta{background:rgba(19,21,30,.96)}
+  .mobile-cta a{background:#1C1F2E;color:var(--ink);border-color:#4A4F6E}
+  .news-list li{border-bottom-color:var(--line)}
+  #movie{background:#0E1120}
+  .substack-embed iframe{background:#1C1F2E}
+}
