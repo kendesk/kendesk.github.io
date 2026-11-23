@@ -392,7 +392,7 @@ section h2, .sec-head h2{font-size:clamp(30px,4.2vw,40px)}
 
 /* ===== 第7弾 今風レイヤー（2026-11-23） ===== */
 .hero{
-  background-image:url("assets/hero-bg.jpg");
+  background-image:url("assets/hero-bg.svg");
   background-size:cover;background-position:center top;
   border-radius:0 0 28px 28px;
 }
@@ -414,7 +414,7 @@ section h2, .sec-head h2{font-size:clamp(30px,4.2vw,40px)}
 
 /* ===== 第8弾 全体背景画像（2026-11-23） ===== */
 body{
-  background-image:url("assets/page-bg.jpg");
+  background-image:url("assets/page-bg.svg");
   background-size:cover;background-position:center top;background-attachment:fixed;
 }
 @media (prefers-color-scheme: dark){
