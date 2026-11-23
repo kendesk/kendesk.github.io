@@ -101,16 +101,36 @@
 </header>
 
 <section id="movie" aria-labelledby="h-movie">
-  <div class="sec-head"><p class="sec-kicker">INTRODUCTION</p><h2 id="h-movie">紹介動画</h2></div>
-  <p class="sec-desc">かれこれ屋でできることを、約25秒の動画で紹介します（音声はありません）。</p>
-  <video class="intro-video" data-b64="assets/intro2.txt" poster="assets/hero-biz.svg" controls muted playsinline preload="metadata"></video>
+  <div class="sec-head"><p class="sec-kicker">INTRODUCTION</p><h2 id="h-movie">紹介スライド</h2></div>
+  <p class="sec-desc">かれこれ屋の中身を、画像で紹介します。スライドを押すと、その内容のページへ進みます。</p>
+  <div class="carousel" role="group" aria-label="かれこれ屋の紹介スライド">
+  <div class="car-track">
+    <a class="car-slide" href="#note"><img src="assets/slide-intro-0.svg" alt="かれこれ屋の紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    <a class="car-slide" href="#note"><img src="assets/slide-intro-1.svg" alt="noteの記事の紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    <a class="car-slide" href="#coconala"><img src="assets/slide-intro-2.svg" alt="ココナラの仕事セット紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    <a class="car-slide" href="#books"><img src="assets/slide-intro-3.svg" alt="Kindleの本の紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    <a class="car-slide" href="#english"><img src="assets/slide-intro-4.svg" alt="英語の仕事の紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    <a class="car-slide" href="#room"><img src="assets/slide-intro-5.svg" alt="楽天ROOMの紹介" loading="lazy"><span class="car-badge">見に行く ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
 </section>
 
 <main>
   <section id="note" aria-labelledby="h-note">
     <div class="sec-head"><p class="sec-kicker">01 ARTICLES</p><span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 18V5.5"/><path d="M8 7h8M8 10.5h5"/></svg></span><h2 id="h-note">note｜読む</h2></div>
     <p class="sec-desc">ChatGPTなどAIツールの使い方、サブスクリプションの見直しと節約、AIが書いた文章を自然な日本語に整えるコツなど、暮らしと仕事に効く記事を書いています。無料で読める記事と、有料のまとめ記事・デジタル商品があります</p>
-  <video class="sec-video" data-b64="assets/video-note.txt" controls muted playsinline preload="none" aria-label="noteの紹介動画"></video>
+  <div class="carousel" role="group" aria-label="noteの記事スライド">
+  <div class="car-track">
+    <a class="car-slide" href="https://note.com/yumi_ai_/n/n9e1829c6136e" target="_blank" rel="noopener"><img src="assets/slide-note-1.svg" alt="無料記事：AI文章がAIっぽいと言われる3つの癖と直し方" loading="lazy"><span class="car-badge">記事を読む ›</span></a>
+    <a class="car-slide" href="https://note.com/yumi_ai_/n/nb60fb705a3b9" target="_blank" rel="noopener"><img src="assets/slide-note-2.svg" alt="無料記事：AIツールは1つで十分？" loading="lazy"><span class="car-badge">記事を読む ›</span></a>
+    <a class="car-slide" href="https://note.com/yumi_ai_/n/n2c1be35726ff" target="_blank" rel="noopener"><img src="assets/slide-note-3.svg" alt="有料記事：サブスク見直しの完全版 ¥500" loading="lazy"><span class="car-badge">記事を見る ›</span></a>
+    <a class="car-slide" href="https://note.com/yumi_ai_/n/n2a3afb62d1fa" target="_blank" rel="noopener"><img src="assets/slide-note-4.svg" alt="有料記事：AI文章の自然化プロンプト＆仕上げチェックリスト ¥2,980" loading="lazy"><span class="car-badge">記事を見る ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
     <div class="cards">
       <a class="card" href="https://note.com/yumi_ai_">
         <span class="card-body"><span class="card-title">noteトップへ</span><span class="card-sub">記事は全部ここ</span></span>
@@ -156,7 +176,15 @@
   <section id="coconala" aria-labelledby="h-coconala">
     <div class="sec-head"><p class="sec-kicker">02 SERVICES</p><span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.5 4.5l5 5L8 21H3v-5z"/><path d="M12.5 6.5l5 5"/></svg></span><h2 id="h-coconala">ココナラ｜頼む・買う</h2></div>
     <p class="sec-desc">日本語の文章校正・推敲、英語から日本語への翻訳、返信文の作成、Excelの表作成やデータ整理などの仕事を受け付けています。すぐ使えるテンプレートやプロンプト集といったデジタル商品も販売しています</p>
-  <video class="sec-video" data-b64="assets/video-coconala.txt" controls muted playsinline preload="none" aria-label="coconalaの紹介動画"></video>
+  <div class="carousel" role="group" aria-label="ココナラの商品スライド">
+  <div class="car-track">
+    <a class="car-slide" href="https://coconala.com/contents_market/pictures/cmwo9vpig04f87x0ih5ae8g9x" target="_blank" rel="noopener"><img src="assets/slide-coconala-1.svg" alt="文章の見直しセット ¥10,000" loading="lazy"><span class="car-badge">商品を見る ›</span></a>
+    <a class="car-slide" href="https://coconala.com/contents_market/pictures/cmwoa11kr04bb8y0hslo1z83c" target="_blank" rel="noopener"><img src="assets/slide-coconala-2.svg" alt="返信・連絡文セット ¥13,000" loading="lazy"><span class="car-badge">商品を見る ›</span></a>
+    <a class="car-slide" href="https://coconala.com/contents_market/pictures/cmwoa7dzr04jl6i0iev1w757y" target="_blank" rel="noopener"><img src="assets/slide-coconala-3.svg" alt="Excelおまかせセット ¥14,000" loading="lazy"><span class="car-badge">商品を見る ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
     <div class="cards">
       <a class="card" href="https://coconala.com/users/6410284">
         <span class="card-body"><span class="card-title">仕事を頼む</span><span class="card-sub">サービスの出品一覧・プロフィール</span></span>
@@ -184,7 +212,15 @@
   <section id="books" aria-labelledby="h-books">
     <div class="sec-head"><p class="sec-kicker">03 BOOKS</p><span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="4.5" height="18" rx="0.8"/><rect x="10" y="3" width="4.5" height="18" rx="0.8"/><path d="M16.5 4.2l3.6 1-4.3 16.6-3.6-1z"/></svg></span><h2 id="h-books">KDPの本｜読む</h2></div>
     <p class="sec-desc">著者 Torvel のKindle本です。ひとり仕事の事務をAIで効率化する実用書、フリーランス向けAIワークフローの英語の本、昭和レトロ雑学クイズと英語なぞなぞの脳トレ本があります。Kindle Unlimited対象です</p>
-  <video class="sec-video" data-b64="assets/video-books.txt" controls muted playsinline preload="none" aria-label="booksの紹介動画"></video>
+  <div class="carousel" role="group" aria-label="Kindleの本のスライド">
+  <div class="car-track">
+    <a class="car-slide" href="https://www.amazon.co.jp/dp/B0HS4YD887" target="_blank" rel="noopener"><img src="assets/slide-book-1.svg" alt="ひとり仕事の事務はAIに任せる ¥1,100" loading="lazy"><span class="car-badge">Amazonで見る ›</span></a>
+    <a class="car-slide" href="https://www.amazon.com/dp/B0HS5345XM" target="_blank" rel="noopener"><img src="assets/slide-book-2.svg" alt="AI Workflows for Freelancers & Solopreneurs $4.99" loading="lazy"><span class="car-badge">Amazonで見る ›</span></a>
+    <a class="car-slide" href="https://www.amazon.co.jp/dp/B0HSLB8LQ4" target="_blank" rel="noopener"><img src="assets/slide-book-3.svg" alt="昭和レトロ雑学クイズ ¥880" loading="lazy"><span class="car-badge">Amazonで見る ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
     <div class="cards">
       <a class="card book-card" href="https://www.amazon.co.jp/dp/B0HS4YD887">
         <img src="assets/cover-hitori.jpg" alt="『ひとり仕事の事務はAIに任せる』の表紙" width="62" height="99" loading="lazy">
@@ -211,7 +247,14 @@
   <section id="english" aria-labelledby="h-english" lang="en">
     <div class="sec-head"><p class="sec-kicker">04 GLOBAL</p><span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.7 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.7-4-9s1.3-6.4 4-9z"/></svg></span><h2 id="h-english">English Services</h2></div>
     <p class="sec-desc">Native Japanese editing and proofreading, English-to-Japanese translation and localization by Ken Sato. I fix AI-translated and machine-translated Japanese into natural, native text. Orders via Fiverr; free weekly newsletter “AI Translation Fails in Japanese” on Substack.</p>
-  <video class="sec-video" data-b64="assets/video-english.txt" controls muted playsinline preload="none" aria-label="englishの紹介動画"></video>
+  <div class="carousel" role="group" aria-label="English services slides">
+  <div class="car-track">
+    <a class="car-slide" href="https://www.fiverr.com/japanese_editor" target="_blank" rel="noopener"><img src="assets/slide-english-1.svg" alt="Fiverr: Japanese editing & translation" loading="lazy"><span class="car-badge">View on Fiverr ›</span></a>
+    <a class="car-slide" href="https://japaneseeditor.substack.com" target="_blank" rel="noopener"><img src="assets/slide-english-2.svg" alt="Substack: AI Translation Fails in Japanese" loading="lazy"><span class="car-badge">Read the newsletter ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
     <div class="cards">
       <a class="card" href="https://www.fiverr.com/japanese_editor">
         <span class="card-body"><span class="card-title">Hire on Fiverr</span><span class="card-sub">Japanese proofreading, EN→JA translation &amp; localization, Japan market research</span></span>
@@ -229,7 +272,14 @@
     <div class="sec-head"><p class="sec-kicker">05 SHOPPING</p><span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 9h16l-1.5 10h-13z"/><path d="M8 9l3.5-5.5M16 9L12.5 3.5"/></svg></span><h2 id="h-room">楽天ROOM｜買う</h2></div>
     <p class="pr-note">広告・PRを含みます</p>
     <p class="sec-desc">楽天市場のお取り寄せグルメ、日用品やキッチン用品などの暮らしのもの、美容のお気に入りを、実際に使った感想と一緒に紹介しています</p>
-  <video class="sec-video" data-b64="assets/video-room.txt" controls muted playsinline preload="none" aria-label="roomの紹介動画"></video>
+  <div class="carousel" role="group" aria-label="楽天ROOMのスライド">
+  <div class="car-track">
+    <a class="car-slide" href="https://room.rakuten.co.jp/room_d8daecaa26/items" target="_blank" rel="noopener"><img src="assets/slide-room-1.svg" alt="楽天ROOMのおすすめ品" loading="lazy"><span class="car-badge">ROOMを見る ›</span></a>
+    <a class="car-slide" href="https://room.rakuten.co.jp/room_d8daecaa26/items" target="_blank" rel="noopener"><img src="assets/slide-room-2.svg" alt="楽天ROOM：実際に使ったものだけ紹介" loading="lazy"><span class="car-badge">ROOMを見る ›</span></a>
+    </div>
+  <button class="car-btn prev" type="button" aria-label="前のスライド">‹</button>
+  <button class="car-btn next" type="button" aria-label="次のスライド">›</button>
+</div>
     <div class="cards">
       <a class="card" href="https://room.rakuten.co.jp/room_d8daecaa26/items">
         <span class="card-body"><span class="card-title">楽天ROOMへ</span><span class="card-sub">おすすめ全部</span></span>

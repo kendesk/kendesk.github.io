@@ -432,3 +432,31 @@ body{
   .hero{background-image:linear-gradient(rgba(16,18,28,.88), rgba(16,18,28,.82)), url("assets/hero-biz.svg")}
 }
 .sec-video{width:100%;border-radius:16px;margin:6px 0 26px;background:#14161F;aspect-ratio:16/9}
+
+
+/* ===== 第11弾 紹介スライド（手動スワイプ） ===== */
+.carousel{position:relative;margin:6px 0 26px}
+.car-track{
+  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;border-radius:16px;-webkit-overflow-scrolling:touch;
+}
+.car-track::-webkit-scrollbar{display:none}
+.car-slide{
+  position:relative;flex:0 0 92%;scroll-snap-align:center;border-radius:16px;overflow:hidden;
+  box-shadow:0 10px 26px rgba(35,44,84,.12);display:block;
+}
+.car-slide img{width:100%;height:auto;display:block}
+.car-badge{
+  position:absolute;right:12px;bottom:12px;background:rgba(24,28,48,.85);color:#fff;
+  font-size:13px;font-weight:700;padding:7px 13px;border-radius:999px;
+}
+.car-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(255,255,255,.92);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;
+  box-shadow:0 4px 14px rgba(35,44,84,.18);
+}
+.car-btn.prev{left:8px}
+.car-btn.next{right:8px}
+@media (min-width:720px){ .car-slide{flex-basis:78%} }
+@media (prefers-color-scheme: dark){ .car-btn{background:rgba(28,31,46,.92);color:var(--ink)} }

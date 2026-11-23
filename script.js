@@ -49,11 +49,10 @@
   secs.forEach(function(el){ io.observe(el); });
 })();
 
-// base64包み動画の読み込み
-document.querySelectorAll('video[data-b64]').forEach(function (v) {
-  fetch(v.getAttribute('data-b64')).then(function (r) { return r.text(); }).then(function (t) {
-    var bin = atob(t), arr = new Uint8Array(bin.length);
-    for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-    v.src = URL.createObjectURL(new Blob([arr], { type: 'video/mp4' }));
-  }).catch(function () {});
+// 紹介スライドの左右ボタン
+document.querySelectorAll('.carousel').forEach(function (car) {
+  var track = car.querySelector('.car-track');
+  var step = function () { return track.clientWidth * 0.92; };
+  car.querySelector('.prev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  car.querySelector('.next').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
 });
