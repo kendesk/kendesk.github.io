@@ -460,3 +460,29 @@ body{
 .car-btn.next{right:8px}
 @media (min-width:720px){ .car-slide{flex-basis:78%} }
 @media (prefers-color-scheme: dark){ .car-btn{background:rgba(28,31,46,.92);color:var(--ink)} }
+
+/* ===== 第10弾 セクションナビ復活＋スタイリッシュ化（2026-11-23） ===== */
+.site-header{flex-wrap:wrap;background:rgba(250,246,238,.85);backdrop-filter:blur(14px)}
+.site-nav{gap:8px}
+.site-nav a{
+  border:1px solid var(--line);border-radius:999px;padding:8px 15px;
+  background:rgba(255,255,255,.65);font-size:13.5px;
+  transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.site-nav a:hover{background:var(--indigo);color:#fff;border-color:var(--indigo);transform:translateY(-1px)}
+.site-nav a.nav-cta{border-radius:999px;border:1px solid var(--indigo);margin-left:2px}
+@media (max-width:719px){
+  .site-header{padding:10px 14px 12px}
+  .site-nav{
+    order:3;flex-basis:100%;overflow-x:auto;flex-wrap:nowrap;
+    padding:6px 2px 2px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .site-nav::-webkit-scrollbar{display:none}
+  .site-nav a:not(.nav-cta){display:inline-flex;flex:0 0 auto}
+  .site-nav a{flex:0 0 auto}
+}
+@media (prefers-color-scheme: dark){
+  .site-header{background:rgba(19,21,30,.85)}
+  .site-nav a{background:rgba(255,255,255,.06)}
+  .site-nav a:hover{background:var(--indigo);color:#fff}
+}
