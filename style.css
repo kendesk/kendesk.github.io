@@ -62,7 +62,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--indigo);outline-off
   font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--shu);margin-bottom:18px;
 }
 .hero h1{
-  font-size:52px;line-height:1.2;letter-spacing:.05em;color:var(--indigo-dark);font-weight:800;
+  font-size:clamp(38px,6vw,56px);line-height:1.2;letter-spacing:.05em;color:var(--indigo-dark);font-weight:800;
 }
 .hero-copy{font-size:18px;line-height:1.85;margin-top:16px;max-width:640px}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
@@ -82,11 +82,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--indigo);outline-off
 .hero-lines strong{color:var(--indigo-dark);margin-right:8px;letter-spacing:.06em}
 
 /* セクション */
-section{padding:56px 0 8px}
+section{padding:72px 0 8px}
 .sec-head{margin-bottom:8px}
 .sec-kicker{font-size:11.5px;font-weight:700;letter-spacing:.24em;color:var(--shu);margin-bottom:6px}
 h2{
-  font-size:27px;color:var(--indigo-dark);font-weight:800;letter-spacing:.03em;line-height:1.35;
+  font-size:32px;color:var(--indigo-dark);font-weight:800;letter-spacing:.03em;line-height:1.35;
 }
 .sec-desc{color:var(--muted);font-size:15.5px;max-width:760px;margin:10px 0 20px}
 .pr-note{font-size:13px;color:var(--shu);font-weight:700;margin-top:6px}
@@ -185,3 +185,12 @@ footer{background:var(--indigo-dark);color:#C9CCE2;margin-top:72px}
   .hero-visual{margin-top:0}
   .intro-video{max-width:860px}
 }
+
+/* 信頼の1行（ヒーロー直下） */
+.trust-line{
+  list-style:none;display:flex;flex-wrap:wrap;gap:8px 0;margin-top:34px;
+  border-top:1px solid var(--line);padding-top:18px;
+  font-size:13.5px;color:var(--muted);font-weight:600;
+}
+.trust-line li:not(:last-child)::after{content:"／";margin:0 12px;color:var(--line)}
+@media (min-width:900px){ .hero .trust-line{grid-column:1 / -1} }
