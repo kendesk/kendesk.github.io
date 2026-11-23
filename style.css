@@ -389,3 +389,25 @@ section h2, .sec-head h2{font-size:clamp(30px,4.2vw,40px)}
 @media (prefers-reduced-motion: reduce){
   .hero-kicker,.hero h1,.hero-copy,.hero-buttons,.hero-lines,.hero-visual{animation:none}
 }
+
+/* ===== 第7弾 今風レイヤー（2026-11-23） ===== */
+.hero{
+  background-image:url("assets/hero-bg.jpg");
+  background-size:cover;background-position:center top;
+  border-radius:0 0 28px 28px;
+}
+.card{border-radius:20px;box-shadow:0 10px 30px rgba(35,44,84,.07)}
+.btn-main{
+  background:linear-gradient(135deg,#2B3577,#232C54);
+  box-shadow:0 8px 20px rgba(35,44,84,.22);
+}
+.hero-visual{border-radius:20px;box-shadow:0 24px 48px rgba(35,44,84,.16)}
+.sec-kicker{
+  background:rgba(255,255,255,.65);border:1px solid var(--line);
+  padding:5px 12px;border-radius:999px;display:inline-block;
+}
+#movie .sec-kicker{background:transparent}
+@media (prefers-color-scheme: dark){
+  .hero{background-image:none}
+  .sec-kicker{background:#1C1F2E}
+}
