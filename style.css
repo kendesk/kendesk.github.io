@@ -486,3 +486,5 @@ body{
   .site-nav a{background:rgba(255,255,255,.06)}
   .site-nav a:hover{background:var(--indigo);color:#fff}
 }
+.search-empty{margin:4px 0 18px;color:var(--muted);font-size:14.5px}
+.search-empty a{color:var(--indigo);font-weight:700}

@@ -33,6 +33,7 @@
     <div class="sec-head"><p class="sec-kicker">ARTICLES</p><h2>記事一覧</h2></div>
     <p class="sec-desc">noteで公開している記事を、テーマ別に並べました。上の検索で、タイトルからも探せます。</p>
     <input class="search-box" id="article-search" type="search" placeholder="記事タイトルで検索" aria-label="記事タイトルで検索">
+    <p id="search-empty" class="search-empty" hidden>見つかりませんでした。よければ人気の記事からどうぞ：<a href="https://note.com/yumi_ai_/n/n9e1829c6136e" data-goatcounter-click="note-n0670dca1ee95-2">サブスク、いくつ契約してるか数えたことある？</a>／<a href="https://note.com/yumi_ai_/n/n9e1829c6136e" data-goatcounter-click="note-n9e1829c6136e-2">AI文章が「AIっぽい」と言われる3つの癖と直し方</a></p>
 
     <h3 class="sub-h">無料で読める記事</h3>
     <div class="cards">
@@ -107,11 +108,26 @@
   var input = document.getElementById('article-search');
   if(!input) return;
   var cards = document.querySelectorAll('.article-card');
+  var empty = document.getElementById('search-empty');
+  var lastCounted = '';
+  function gcEvent(name){
+    if(window.goatcounter && window.goatcounter.count){ window.goatcounter.count({path: name, event: true}); }
+  }
   input.addEventListener('input', function(){
     var q = input.value.trim();
+    var visible = 0;
     cards.forEach(function(c){
-      c.style.display = (!q || c.textContent.indexOf(q) !== -1) ? '' : 'none';
+      var hit = (!q || c.textContent.indexOf(q) !== -1);
+      c.style.display = hit ? '' : 'none';
+      if(hit) visible++;
     });
+    if(empty) empty.hidden = !(q && visible === 0);
+    if(q && q !== lastCounted){
+      lastCounted = q;
+      gcEvent('search-run');
+      if(visible === 0) gcEvent('search-zero');
+    }
+    if(!q) lastCounted = '';
   });
 })();
 </script>
