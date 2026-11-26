@@ -56,3 +56,14 @@ document.querySelectorAll('.carousel').forEach(function (car) {
   car.querySelector('.prev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
   car.querySelector('.next').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
 });
+
+// テーマ切り替え（昼＝紙／夜＝藍）
+(function(){
+  var btn = document.getElementById('themeBtn');
+  if(!btn){ return; }
+  btn.addEventListener('click', function(){
+    var next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = next;
+    try{ localStorage.setItem('kk-theme', next); }catch(e){}
+  });
+})();
