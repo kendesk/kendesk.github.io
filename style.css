@@ -135,7 +135,6 @@ section{padding:64px 0 8px}
   font-family:var(--serif);font-size:clamp(28px,4.4vw,38px);font-weight:800;letter-spacing:.03em;
   margin:0;color:var(--ink);display:flex;align-items:center;gap:14px;
 }
-.sec-icon{width:34px;height:34px;color:var(--shu);flex:0 0 auto}
 .sec-desc{color:var(--ink2);max-width:720px;margin:8px 0 24px}
 .pr-note{color:var(--muted);font-size:13px;margin-top:6px}
 .next-one{color:var(--muted);font-size:14px;margin-top:26px}
