@@ -268,12 +268,14 @@ details p{color:var(--ink2);margin:10px 0 2px}
 .footer-nav a:hover{color:var(--shu)}
 .footer-note,.footer-copy{color:var(--muted);font-size:13px}
 .footer-col{display:flex;flex-direction:column}
-.sns-row{display:flex;gap:10px;flex-wrap:wrap}
-.sns-row a{
-  color:var(--ink2);text-decoration:none;font-size:13.5px;font-weight:700;border:1px solid var(--line2);
-  border-radius:999px;padding:7px 14px;transition:.2s;
-}
-.sns-row a:hover{border-color:var(--shu);color:var(--shu)}
+.sns-row{display:flex;gap:16px;flex-wrap:wrap}
+.sns-btn{display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--ink2);text-decoration:none}
+.sns-btn .ic{width:42px;height:42px;border:1px solid var(--line2);border-radius:50%;display:grid;place-items:center;transition:.2s}
+.sns-btn svg{width:18px;height:18px}
+.sns-btn .note-mark{font-size:11px;font-weight:800;letter-spacing:-.02em}
+.sns-btn .sns-name{font-size:10px;font-weight:600}
+.sns-btn:hover{color:var(--ink)}
+.sns-btn:hover .ic{border-color:var(--shu);color:var(--shu);transform:translateY(-2px)}
 .mark{color:var(--shu)}
 
 /* レスポンシブ */
